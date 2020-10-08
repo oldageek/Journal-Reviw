@@ -1,11 +1,5 @@
 @extends('layouts.app')
 
-@section('botones')
-    <a href="{{ route('articulo.index') }}" class="btn btn-outline-danger mr-2 text-uppercase font-weight-bold">
-        <svg class="icono" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd"></path></svg>
-        Volver
-    </a>
-@endsection
 
 @section('content')
     <article class="contenido-articulo">
@@ -19,12 +13,12 @@
         <div class="receta-meta mt-3">
             <p>
                 <span class="font-weight-bold">Categoria :</span>
-                {{ $articulo -> categoria_id }}
+                {{ $articulo -> categoria -> nombre }}
             </p>
 
             <p>
                 <span class="font-weight-bold">Autor :</span>
-                {{ $articulo -> user_id }}
+                {{ $articulo -> autor -> name }}
             </p>
 
             <p>

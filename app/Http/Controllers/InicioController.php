@@ -26,4 +26,15 @@ class InicioController extends Controller
 
         return view('inicio.index', compact('nuevas', 'articulos'));
     }
+
+    public function issues() {
+        // Ultimos articlos
+        $ultimos_articulos = Articulo::orderBy('created_at', 'DESC') -> take(10) -> get(); 
+
+        return view('inicio.issue', compact('ultimos_articulos'));
+    }
+
+    public function privacy() {
+        return view('inicio.privacy');
+    }
 }

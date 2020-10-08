@@ -30,7 +30,10 @@ Route::get('/perfiles/{perfil}', 'PerfilController@show') -> name('perfiles.show
 Route::get('/perfiles/{perfil}/edit', 'PerfilController@edit') -> name('perfiles.edit');
 Route::put('/perfiles/{perfil}', 'PerfilController@update') -> name('perfiles.update');
 
+// Rutas de Inicio de la pagina
 Route::get('/', 'InicioController@index') -> name('inicio.index');
+Route::get('/issues', 'InicioController@issues') -> name('inicio.issue');
+Route::get('/privacy', 'InicioController@privacy') -> name('inicio.privacy');
 
 Auth::routes(['verify' => true]);
 
