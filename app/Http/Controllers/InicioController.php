@@ -37,4 +37,12 @@ class InicioController extends Controller
     public function privacy() {
         return view('inicio.privacy');
     }
+
+    public function indexing() {
+        return view('inicio.indexing');
+    }
+
+    public function editorial() {
+        return view('inicio.editorialboard');
+    }
 }

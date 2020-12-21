@@ -8,10 +8,9 @@
     <header>
         <div class="contenedor">
             <nav class="menu">
-                <a href="#" id="btn-acerca-de">Home</a>
                 <a href="{{ route('inicio.issue') }}" id="btn-menu">Current Issue</a>
-                <a href="#" id="btn-galeria">Editorial Board</a>
-                <a href="#" id="btn-ubicacion">Indexing</a>
+                <a href="{{ route('inicio.editorialboard') }}" id="btn-galeria">Editorial Board</a>
+                <a href="{{ route('inicio.indexing') }}" id="btn-ubicacion">Indexing</a>
                 <a href="{{ route('inicio.privacy') }}" id="btn-ubicacion">Privacy Policy</a>
             </nav>
 
@@ -25,10 +24,10 @@
 
 @section('content')
     <div class="container nuevos-articulos">
-        <h2 class="titulo-categoria mb-4">About The Journal</h2>
         <div class="row pb-4">
             <div class="col-12 col-md-6 order-2 order-md-1">
                 <img class="portada" src="{{ asset('images/portada.png') }}" alt="">
+                <h6 class="text-bold mt-3">ISSN: 2395 - 9630</h6>
             </div>
             <div class="col col-md-6 order-1 order-md-2 mt-0">
                 <h2 class="text-center mb-3">Mexican Journal</h2>
@@ -91,13 +90,7 @@
 @endsection
 
 @section('footer-journal')
-    <div class="col d-flex justify-content-center">
-        <p class="text-center p-3">
-            © 2017 All rights reserved Mexican Journal of Materials Science and Engineering.<br>
-            This page may be reproduced for non-profit purposes, provided it does not mutilate, cite the complete source and its electronic address,<br>
-            otherwise requires prior written permission of the institution.
-        </p>
-    </div>
+   @include('ui/footer')
 @endsection
 
 @section('scripts')

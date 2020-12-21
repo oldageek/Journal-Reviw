@@ -1973,7 +1973,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['fecha'],
   computed: {
     formatearFecha: function formatearFecha() {
-      return moment(this.fecha).locale('es').format('DD [de] MMMM [del] YYYY');
+      return moment(this.fecha).locale('es').format('YYYY MMMM');
     }
   }
 });

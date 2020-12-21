@@ -34,6 +34,8 @@ Route::put('/perfiles/{perfil}', 'PerfilController@update') -> name('perfiles.up
 Route::get('/', 'InicioController@index') -> name('inicio.index');
 Route::get('/issues', 'InicioController@issues') -> name('inicio.issue');
 Route::get('/privacy', 'InicioController@privacy') -> name('inicio.privacy');
+Route::get('/indexing', 'InicioController@indexing') -> name('inicio.indexing');
+Route::get('/editorial', 'InicioController@editorial') -> name('inicio.editorialboard');
 
 Auth::routes(['verify' => true]);
 

@@ -11032,7 +11032,7 @@ header {
 
 header .contenedor {
   position: relative;
-  height: 700px;
+  height: 320px;
 }
 
 header .menu {
@@ -11058,7 +11058,7 @@ header .textos {
   width: 100%;
   color: #fff;
   position: absolute;
-  top: 50%;
+  top: 70%;
   margin-top: -52px;
 }
 
@@ -11075,6 +11075,10 @@ header .textos h3 {
   font-weight: 300;
   font-size: 25px;
   font-style: italic;
+}
+
+.indexing {
+  font-size: 18px;
 }
 
 @media screen and (max-width: 800px) {

@@ -24,7 +24,7 @@ header {
     background-position: center 0;
     .contenedor {
         position: relative;
-        height: 700px;
+        height: 320px;
     }
     .menu {
         width: 100%;
@@ -46,7 +46,7 @@ header {
         width: 100%;
         color: #fff;
         position: absolute;
-        top: 50%;
+        top: 70%;
         margin-top: -52px;
         .nombre {
             font-size: 50px;
@@ -61,4 +61,8 @@ header {
             font-style: italic;
         }
     }
+}
+
+.indexing {
+    font-size: 18px;
 }

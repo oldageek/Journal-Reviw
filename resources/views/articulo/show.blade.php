@@ -32,10 +32,12 @@
 
             <h6 class="font-weight-bold">Achivo del articulo:</h6>
             <div>
-                <a class="btn btn-success" href="/storage/{{ $articulo -> archivo }}">Vizualizar Artuculo</a>
+                <a class="btn btn-success" href="/storage/{{ $articulo -> archivo }}" target="_blanck">Vizualizar Artuculo</a>
             </div>
         </div>
     </article>
+@endsection
 
-    
+@section('footer-journal')
+   @include('ui/footer')
 @endsection

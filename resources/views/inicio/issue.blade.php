@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('style')
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
-@endsection
-
 @section('menu')
     <h1 class="my-5 text-center uppercase">Current Issue</h1>
 
@@ -26,19 +22,21 @@
             <div class="tab-content" id="nav-tabContent">
                 @foreach ($ultimos_articulos as $articulo)
                     <div class="tab-pane fade show" id="elem{{ $articulo -> id }}" role="tabpanel" aria-labelledby="elem{{ $articulo -> id }}">
-                        <h3 class="text-center">{{ $articulo -> titulo }}</h3>
+                        <h5 class="">{{ $articulo -> titulo }}</h5>
                         <p class="">{!! Str::words(strip_tags($articulo -> abstract), 15, ' ....') !!}</p>
                         <p>
                             <span class="font-weight-bold text-bold">Author: </span>
                             <a class="">{{ $articulo -> autor -> name }}</a> 
-                            <span class="font-weight-bold text-bold ml-3"> Categoria: </span>
-                            <a class="">{{ $articulo -> categoria -> nombre }}</a>
-                            <a href="{{ route('articulo.show', ['articulo' => $articulo -> id]) }}" class="btn btn-dark ml-5">View Article</a>
+                            <a href="/storage/{{ $articulo -> archivo }}" target="_blanck" class="btn btn-dark ml-5">PDF File</a>
                         </p>
                     </div>
                 @endforeach
             </div>
         </div>    
     </div>
+@endsection
+
+@section('footer-journal')
+   @include('ui/footer')
 @endsection
 
